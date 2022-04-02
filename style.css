@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 800px;
+    background: radial-gradient( #0a2e38 0%, #000000 80%);
+}
+
+.tricky-btn {
+    position: relative;
+    width: 250px;
+    height: 50px;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    transform: translateZ(-25px);
+}
+
+.tricky-btn div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    backface-visibility: hidden;
+    border: 3px solid #daf6ff;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: inset 0 0 4px black;
+    border-radius: 3px;
+}
+
+.tricky-btn div:nth-child(1) {
+    background-color: aqua;
+    transform: translateZ(25px);
+}
+
+.tricky-btn div:nth-child(2) {
+    background-color: coral;
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+.tricky-btn:hover {
+    transform: rotateX(-90deg) translateY(25px);
+}
+
+
